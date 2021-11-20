@@ -4,18 +4,12 @@ import "./App.css";
 function App() {
 
   const [backgroundColor, setBackgroundColor] = useState("#000000")
-  const [randomNum, setRandomNum] = useState(0)
 
   const backgroundColors = ["#4978c0", "#74cfe9", "#f55919", "#800000", "#008080"]
 
   const changeBackground = () => {
-    getRandomNum();
+    const randomNum = Math.floor((Math.random() * backgroundColors.length));
     setBackgroundColor(backgroundColors[randomNum]);
-  }
-
-  const getRandomNum = () => {
-    let getRandomNum = Math.floor((Math.random() * backgroundColors.length));
-    setRandomNum(getRandomNum);
   }
 
   return (
