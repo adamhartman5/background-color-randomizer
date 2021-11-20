@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./App.css";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
   }
 
   const getRandomNum = () => {
-    let getRandomNum = Math.floor((Math.random() * 5));
+    let getRandomNum = Math.floor((Math.random() * backgroundColors.length));
     setRandomNum(getRandomNum);
   }
 
